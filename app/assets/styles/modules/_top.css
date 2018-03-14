@@ -1,0 +1,53 @@
+.top {
+    height: 4.5rem;
+    max-width: 73.125rem;
+    margin: 0 auto;
+
+    @mixin atMedium {
+        height: 9.34375rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        padding-top: 2.5rem;
+        padding-bottom: 3.4375rem;
+        padding-left: 1.5rem;
+        display: inline-block;
+    }
+
+    &__all-sections {
+        display: flex;
+        flex-direction: row;
+        padding-right: 1.0625rem;
+    }
+
+    &__section {
+        padding: 1.0625rem;
+        padding-top: 2.1rem;
+        display: flex;
+        flex-direction: row;
+
+        &__text {
+            padding-left: 1.625rem;
+            line-height: 1;
+        }
+
+        &__img {
+            margin-top: 1rem;
+        }
+
+        &__title {
+            color: $mainOrange;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        &__info {
+            color: $lightGray;
+        }
+        
+    }
+}
