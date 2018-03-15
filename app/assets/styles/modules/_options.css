@@ -1,0 +1,39 @@
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__option {
+        width: 9.8125rem;
+        height: 9.125rem;
+        padding: 4rem;
+        margin: 2rem 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: 1px solid rgba(0,0,0,0.1);
+        text-align: center;
+
+        @mixin atMedium {
+            width: 13.3125rem;
+        }
+
+        @mixin atLarge {
+            width: 16.875rem;
+        }
+
+        &__icon {
+            filter:
+                    invert(100%)
+                    brightness(50%)
+                    sepia(1)
+                    hue-rotate(-19deg)
+                    saturate(1626%)
+                    brightness(99.4%)
+                    /* sepia(100%)
+                    saturate(10000%)
+                    hue-rotate(140deg)
+                    brightness(100%)
+                    invert(100%) */
+        }
+    }
+}

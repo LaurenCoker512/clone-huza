@@ -6,7 +6,8 @@
     <title>Happy Hands Children's Advocacy Center</title>
     <meta name="keywords" content="advocacy, activism, children's rights, children, children's advocacy, corporal punishment, child abuse">
     <meta name="description" content="">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,700" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:400,400i,600" rel="stylesheet">
     <!-- Main titles are on Montserrat, and everything else in Open Sans-->
     <!-- Light gray that darkens others is rgba(0,0,0,0.2)-->
     <link rel="stylesheet" href="temp/styles/styles.css">
@@ -70,17 +71,44 @@
     </header>
 
     <section class="large-hero">
-        <img src="assets/images/slider1.jpg">
+        <div class="large-hero__img">
+            <picture>
+                <source srcset="assets/images/slider1.jpg" media="(min-width: 1180px)">
+                <source srcset="assets/images/slider1-1020-1180px.jpg" media="(min-width: 1020px)">
+                <source srcset="assets/images/slider1-775-1020px.jpg" media="(min-width: 775px)">
+                <img src="assets/images/slider1-under-775px.jpg" class="large-hero__image1">
+            </picture>
+        </div>
         <h1 class="large-hero__title">Help Children</h1>
         <h2 class="large-hero__subtitle">Give Today</h2>
-        <button>Donate</button>
+        <button class="large-hero__btn">Donate</button>
     </section>
 
     <section class="options">
-        <div class="options__option">Children's Care</div>
-        <div class="options__option">Donate</div>
-        <div class="options__option">Volunteer</div>
-        <div class="options__option">Fight for Change</div>
+        <div class="options__option">
+            <img src="assets/images/f1-hover.png" class="options__option__icon">
+            <p class="options__option__text">
+                Children's Care
+            </p>
+        </div>
+        <div class="options__option">
+            <img src="assets/images/f2-hover.png" class="options__option__icon">
+            <p class="options__option__text">
+                Donate
+            </p>
+        </div>
+        <div class="options__option">
+            <img src="assets/images/f3-hover.png" class="options__option__icon">
+            <p class="options__option__text">
+                Volunteer
+            </p>
+        </div>
+        <div class="options__option">
+            <img src="assets/images/f4-hover.png" class="options__option__icon">
+            <p class="options__option__text">
+                Fight for Change
+            </p>
+        </div>
     </section>
 
     <section class="donate-hero">
