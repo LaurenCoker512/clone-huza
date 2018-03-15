@@ -345,6 +345,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .top {
     height: 4.5rem;
     max-width: 73.125rem;
@@ -402,39 +406,41 @@ body {
             color: #737373;
         }
 
+.header {
+    overflow: hidden;
+}
+
 @media (min-width: 975px) {
 
 .header {
         height: 5rem;
-        background-color: #2b2a27
+        background-color: #34ADFF;
+        background-image: -webkit-linear-gradient(150deg, #fd580b 45%, #2b2a27 45%)
 }
     }
 
+.header__content {
+        max-width: 73.125rem;
+        margin: 0 auto;
+    }
+
 .header nav {
-        
+        overflow: visible;
+        padding-top: 0.9rem;
     }
 
 .header__other {
-        border-bottom: 100px solid #fd580b;
-	    border-left: 5rem solid transparent;
-	    border-right: 5rem solid transparent;
-	    height: 0;
-        width: 100px;
-        float: right;
-        background-color: #fd580b;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+        
     }
 
 .header li {
         list-style: none;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-weight: 400;
         color: #fff;
         display: inline;
-        padding-left: 1.3125rem;
-        padding-right: 1.3125rem;
+        padding: 1rem 1.3125rem;
         transition: color .2s linear;
     }
 
@@ -442,3 +448,64 @@ body {
             color: #fd580b;
             cursor: pointer;
         }
+
+@media (min-width: 1180px) {
+
+.header li {
+            font-size: 1rem
+    }
+    }
+
+.header__cart {
+        /* float: right; */
+    }
+
+.header__donate-btn {
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        -webkit-transform: translateY(-80%);
+                transform: translateY(-80%);
+        padding: 1.3rem 2.2rem 1.6rem 2.2rem;
+        font-size: 1.1rem;
+        width: 14.25rem;
+        margin-right: 2rem;
+        float: right;
+    }
+
+.header__donate-btn button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+        }
+
+.header__donate-btn button:hover {
+                cursor: pointer;
+            }
+
+/* http://apusthemes.com/wp-demo/huza/wp-content/themes/huza/images/donation.png */
+
+.large-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.large-hero__title {
+         font-family: "Montserrat", sans-serif;
+         font-size: 4rem;
+         color: #fff;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translateY(-300%) translateX(-50%);
+                 transform: translateY(-300%) translateX(-50%);
+     }
+
+.large-hero__subtitle {
+        font-family: "Montserrat", sans-serif;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateY(-300%) translateX(-50%);
+                transform: translateY(-300%) translateX(-50%);
+     }

@@ -1,0 +1,23 @@
+.large-hero {
+    position: relative;
+    overflow: hidden;
+
+     &__title {
+         font-family: "Montserrat", sans-serif;
+         font-size: 4rem;
+         color: #fff;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translateY(-300%) translateX(-50%);
+     }
+
+     &__subtitle {
+        font-family: "Montserrat", sans-serif;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-300%) translateX(-50%);
+     }
+}

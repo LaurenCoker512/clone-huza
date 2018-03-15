@@ -1,38 +1,70 @@
 .header {
+    overflow: hidden;
+
     @mixin atMedium {
         height: 5rem;
-        background-color: $darkGray;
+        background-color: #34ADFF;
+        background-image: -webkit-linear-gradient(150deg, $mainOrange 45%, $darkGray 45%);
+    }
+
+    &__content {
+        max-width: 73.125rem;
+        margin: 0 auto;
     }
 
     & nav {
-        
+        overflow: visible;
+        padding-top: 0.9rem;
     }
 
     &__other {
-        border-bottom: 100px solid $mainOrange;
-	    border-left: 5rem solid transparent;
-	    border-right: 5rem solid transparent;
-	    height: 0;
-        width: 100px;
-        float: right;
-        background-color: $mainOrange;
-        transform: translateY(-50%);
+        
     }
 
     & li {
         list-style: none;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-weight: 400;
         color: #fff;
         display: inline;
-        padding-left: 1.3125rem;
-        padding-right: 1.3125rem;
+        padding: 1rem 1.3125rem;
         transition: color .2s linear;
 
         &:hover {
             color: $mainOrange;
             cursor: pointer;
         }
+
+        @mixin atLarge {
+            font-size: 1rem;
+        }
+    }
+
+    &__cart {
+        /* float: right; */
+    }
+    
+    &__donate-btn {
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transform: translateY(-80%);
+        padding: 1.3rem 2.2rem 1.6rem 2.2rem;
+        font-size: 1.1rem;
+        width: 14.25rem;
+        margin-right: 2rem;
+        float: right;
+
+        & button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
+
+/* http://apusthemes.com/wp-demo/huza/wp-content/themes/huza/images/donation.png */
