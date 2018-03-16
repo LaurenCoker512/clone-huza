@@ -1,20 +1,37 @@
 .options {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 7rem 0 5rem 0;
+
+    @mixin atSmall {
+        flex-direction: row;
+    }
 
     &__option {
-        width: 9.8125rem;
-        height: 9.125rem;
-        padding: 4rem;
+        padding: 1.2rem;
+        width: 92%;
         margin: 2rem 1rem;
         font-size: 1.1rem;
         font-weight: 600;
         border: 1px solid rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+
+        @mixin atSmall {
+            padding: 2rem;
+            width: 9.8125rem;
+            max-height: 10.625rem;
+            min-height: 9.125rem;
+        }
 
         @mixin atMedium {
             width: 13.3125rem;
+            height: 9.125rem;
         }
 
         @mixin atLarge {
@@ -29,11 +46,6 @@
                     hue-rotate(-19deg)
                     saturate(1626%)
                     brightness(99.4%)
-                    /* sepia(100%)
-                    saturate(10000%)
-                    hue-rotate(140deg)
-                    brightness(100%)
-                    invert(100%) */
         }
     }
 }
