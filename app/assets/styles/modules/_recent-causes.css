@@ -1,0 +1,79 @@
+.recent-causes {
+    margin-top: 8rem;
+
+    &__causes {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img {
+        overflow: hidden;
+    }
+
+    &__section {
+        width: 33%;
+        max-width: 23.125rem;
+        margin: 1rem;
+        overflow: hidden;
+
+        &:hover &__text {
+            border-left: 2px dashed $mainOrange;
+            border-right: 2px dashed $mainOrange;
+            border-bottom: 2px dashed $mainOrange;
+        }
+
+        &:hover button {
+            color: #fff;
+            background-color: $mainOrange;
+            cursor: pointer;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        & img {
+            width: 100%;
+            padding-bottom: 0;
+            transition: all 0.2s linear;
+        }
+
+        &__text {
+            border-left: 2px dashed rgba(0, 0, 0, 0.2);
+            border-right: 2px dashed rgba(0, 0, 0, 0.2);
+            border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.2s linear;
+        }
+
+        & h2 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 2rem;
+            margin-top: 0.8rem;
+        }
+
+        &__donated {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        & p {
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: 600;
+            font-family: "Roboto", sans-serif;
+            line-height: 2;
+            margin-bottom: 1.7rem;
+        }
+
+        & button {
+            color: $mainOrange;
+            font-weight: 600;
+            border: 1px solid $mainOrange;
+            padding: 0.8rem 3rem;
+            transition: all 0.2s linear;
+        }
+    }
+}

@@ -21,6 +21,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        transition: all 0.2s linear;
 
         @mixin atSmall {
             padding: 2rem;
@@ -39,6 +40,7 @@
         }
 
         &__icon {
+            transition: all 0.2s linear;
             filter:
                     invert(100%)
                     brightness(50%)
@@ -46,6 +48,16 @@
                     hue-rotate(-19deg)
                     saturate(1626%)
                     brightness(99.4%)
+        }
+
+        &:hover {
+            background-color: $mainOrange;
+        }
+
+        &:hover &__icon {
+            filter:
+                grayscale(80%)
+                brightness(0%)
         }
     }
 }

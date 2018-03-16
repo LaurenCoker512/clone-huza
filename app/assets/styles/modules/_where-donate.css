@@ -1,0 +1,50 @@
+.where-donate {
+    display: flex;
+    
+    &__section {
+        width: 50%;
+        color: #fff;
+        padding: 2.5rem;
+        text-align: center;
+        min-height: 25rem;
+
+        & h2 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        & p {
+            line-height: 2;
+            font-size: 1.1rem;
+        }
+
+        &--left {
+            background-color: $mainOrange;
+        }
+
+        &--right {
+            background-color: $mainBrown;
+        }
+    }
+
+    &__btn {
+        padding: 0.7rem 3rem;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--left {
+            background-color: $darkOrange;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        &--right {
+            background-color: $mainOrange;
+        }
+    }
+}
