@@ -1,0 +1,5 @@
+.large-footer {
+    background-color: $darkGray;
+    padding: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+}

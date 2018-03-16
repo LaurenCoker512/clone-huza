@@ -876,6 +876,16 @@ body {
             transition: all 0.2s linear;
         }
 
+.recent-causes__load-btn {
+        margin: 0 auto;
+        display: block;
+        color: #fff;
+        font-weight: 600;
+        background-color: #fd580b;
+        border: none;
+        padding: 0.8rem 3rem;
+    }
+
 .section-title__title {
         font-family: "Montserrat", sans-serif;
         font-size: 2.5rem;
@@ -888,4 +898,224 @@ body {
         color: #fd580b;
         font-size: 1rem;
         text-align: center;
+    }
+
+.current-count {
+    overflow: hidden;
+    background-image: url("../../assets/images/school-298680_1920.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    max-height: 30.32rem;
+    position: relative;
+}
+
+.current-count__container {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%);
+    }
+
+.current-count__section {
+        width: 25%;
+        z-index: 2;
+        color: #fff;
+        padding: 2rem;
+        margin: 2rem;
+        font-family: "Montserrat", sans-serif;
+    }
+
+.current-count__section h3 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+.current-count__section__count {
+            font-weight: 600;
+            font-size: 3.5rem;
+        }
+
+.events__container {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+.events__section {
+        width: 50%;
+        max-width: 35.625rem;
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 1.5rem 2.5rem;
+        margin: 1rem;
+        transition: all 0.2s linear;
+    }
+
+.events__section h3 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+
+.events__section p {
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 2;
+            font-weight: 600;
+            transition: all 0.2s linear;
+        }
+
+.events__section:hover {
+            background-color: #fd580b;
+        }
+
+.events__section:hover p {
+            color: #fff;
+        }
+
+.testimonials {
+    overflow: hidden;
+    background-image: url("../../assets/images/fda-child-care-gallery-4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    max-height: 41.8rem;
+    position: relative;
+}
+
+.testimonials__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateY(-30%) translateX(-50%);
+                transform: translateY(-30%) translateX(-50%);
+        text-align: center;
+    }
+
+.testimonials__text p {
+            color: #fff;
+            font-weight: 500;
+            line-height: 2;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+.testimonials__text__attr {
+            font-size: 1.1rem;
+            color: #fd580b;
+        }
+
+.testimonials__text img {
+            display: block;
+            margin: 1rem auto;
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }
+
+.news {
+    margin-top: 9rem;
+}
+
+.news__container {
+        display: flex;
+        justify-content: center;
+    }
+
+.news__section {
+        overflow: hidden;
+        width: 33%;
+        max-width: 23.25rem;
+        margin: 1rem;
+        box-shadow: -1px 10px 15px 3px rgba(0, 0, 0, 0.15);
+        transition: all 0.2s linear;
+    }
+
+.news__section:hover {
+            box-shadow: -1px 10px 15px 3px rgba(0, 0, 0, 0.3);
+        }
+
+.news__section img {
+            width: 100%;
+            -webkit-transform: scale(1.4);
+                    transform: scale(1.4);
+        }
+
+.news__section__text {
+            margin-top: 6rem;
+            padding: 1.5rem 1.5rem 3rem 1.5rem;
+        }
+
+.news__section__text h3 {
+                font-family: "Montserrat", sans-serif;
+                font-size: 1.2rem;
+                font-weight: 500;
+                transition: color 0.2s linear;
+            }
+
+.news__section__text h3:hover {
+                    cursor: pointer;
+                    color: #fd580b;
+                }
+
+.news__section__text button {
+                border: none;
+                background-color: transparent;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: rgba(0, 0, 0, 0.5);
+                transition: color 0.2s linear;
+            }
+
+.news__section__text button:hover {
+                    color: #fd580b;
+                    cursor: pointer;
+                }
+
+.news__section__date {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fd580b;
+        }
+
+.newsletter {
+    margin-top: 6rem;
+    background-color: #fd580b;
+    color: #fff;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.newsletter__content {
+        max-width: 37.5rem;
+        margin: 0 auto;
+    }
+
+.newsletter h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+.newsletter h3 {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+    }
+
+.newsletter input {
+        padding: 0.7rem 1rem;
+        min-width: 70%;
+        border: none;
+    }
+
+.newsletter button {
+        background-color: #d34a0a;
+        color: #fff;
+        font-weight: 600;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0.7rem 2.5rem;
     }

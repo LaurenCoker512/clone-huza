@@ -1,0 +1,63 @@
+.news {
+    margin-top: 9rem;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__section {
+        overflow: hidden;
+        width: 33%;
+        max-width: 23.25rem;
+        margin: 1rem;
+        box-shadow: -1px 10px 15px 3px rgba(0, 0, 0, 0.15);
+        transition: all 0.2s linear;
+
+        &:hover {
+            box-shadow: -1px 10px 15px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        & img {
+            width: 100%;
+            transform: scale(1.4);
+        }
+
+        &__text {
+            margin-top: 6rem;
+            padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+            & h3 {
+                font-family: "Montserrat", sans-serif;
+                font-size: 1.2rem;
+                font-weight: 500;
+                transition: color 0.2s linear;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $mainOrange;
+                }
+            }
+
+            & button {
+                border: none;
+                background-color: transparent;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: rgba(0, 0, 0, 0.5);
+                transition: color 0.2s linear;
+
+                &:hover {
+                    color: $mainOrange;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__date {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: $mainOrange;
+        }
+    }
+}
