@@ -806,6 +806,8 @@ body {
 
 .recent-causes__img {
         overflow: hidden;
+        -webkit-clip-path: url(#clip);
+                clip-path: url(#clip);
     }
 
 .recent-causes__section {
@@ -1119,3 +1121,9 @@ body {
         border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 0.7rem 2.5rem;
     }
+
+.large-footer {
+    background-color: #2b2a27;
+    padding: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+}

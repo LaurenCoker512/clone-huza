@@ -8,6 +8,7 @@
 
     &__img {
         overflow: hidden;
+        clip-path: url(#clip);
     }
 
     &__section {
