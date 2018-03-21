@@ -1,24 +1,68 @@
 .header {
     overflow: hidden;
+    display: none;
 
     @mixin atMedium {
+        display: block;
         height: 5rem;
         background-color: #34ADFF;
         background-image: -webkit-linear-gradient(150deg, $mainOrange 45%, $darkGray 45%);
     }
 
+    @mixin atLarge {
+        background-image: -webkit-linear-gradient(150deg, $mainOrange 42%, $darkGray 42%);
+    }
+
     &__content {
-        max-width: 73.125rem;
+        
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        @mixin atMedium {
+            max-width: 58.75rem;
+        }
+
+        @mixin atLarge {
+            max-width: 73.125rem;
+        }
+    }
+
+    & ul {
+        padding: 0;
+
+        &:first-child {
+            padding-left: 0;
+        }
     }
 
     & nav {
         overflow: visible;
         padding-top: 0.9rem;
+        width: 55%;
+        display: flex;
+        flex-wrap: nowrap;
+
+        @mixin atMedium {
+            justify-content: flex-end;
+            padding-right: 2rem;
+        }
+
+        @mixin atLarge {
+            justify-content: center;
+            padding-right: 6rem;
+            width: 65%;
+        }
     }
 
     &__other {
-        
+        width: 45%;
+        display: flex;
+        justify-content: flex-end;
+
+        @mixin atLarge {
+            width: 35%;
+        }
     }
 
     & li {
@@ -28,32 +72,85 @@
         font-weight: 600;
         color: #fff;
         display: inline;
-        padding: 1rem 1.3125rem;
-        transition: color .2s linear;
+        padding: 1rem 0.7rem;
 
-        &:hover {
+        & > a {
+            color: #fff;
+            text-decoration: none;
+            transition: color .2s linear;
+        }
+
+        & > a:hover {
             color: $mainOrange;
             cursor: pointer;
         }
 
         @mixin atLarge {
             font-size: 1rem;
+            padding: 1rem 1.3125rem;
         }
     }
 
-    &__cart {
-        /* float: right; */
+    & li.header--has-child > a:after {
+        color: #fff;
+        white-space: pre;
+        content: '  ▾';
+        font-size: 0.7rem;
+        transition: color .2s linear;
+    }
+
+    & li.header--has-child:hover > a:after {
+        color: $mainOrange;
+    }
+
+    &__other-btn {
+        width: 37%;
+        padding-top: 2.2rem;
+        padding-left: 3rem;
+        position: relative;
+
+        &__cart {
+            padding-right: 2rem;
+            position: relative;
+        }
+
+        &__cart-count {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 1.3rem;
+            height: 1.3rem;
+            top: -75%;
+            left: 15%;
+        }
+
+        &__search {
+            display: inline;
+            padding-left: 0;
+            width: 2.1rem;
+            position: absolute;
+            top: 30%;
+            right: 15%;
+            filter:
+                    invert(100%)
+                    brightness(1000%)
+                    saturate(1000%)
+        }
     }
     
     &__donate-btn {
         background-color: rgba(0, 0, 0, 0.2);
         border: 1px solid rgba(0, 0, 0, 0.1);
-        transform: translateY(-80%);
-        padding: 1.3rem 2.2rem 1.6rem 2.2rem;
+        padding: 1.4rem 2.2rem 1.7rem 2.2rem;
         font-size: 1.1rem;
+        font-weight: 600;
         width: 14.25rem;
-        margin-right: 2rem;
         float: right;
+        display: none;
+
+        @mixin atMedium {
+            display: block;
+        }
 
         & button {
             background-color: transparent;

@@ -19,6 +19,14 @@
 
     <section class="top">
         <img class="top__logo" alt="Logo" src="assets/images/logo.png">
+        <div class="top__dropdown">
+            <div class="top__dropdown__menu">
+                <div class="top__dropdown__menu__middle"></div>
+            </div>
+            <div class="top__dropdown__search">
+                <img src="assets/images/Feedbin-Icon-home-search.svg">
+            </div>
+        </div>
         <div class="top__all-sections">
             <div class="top__section">
                 <div class="top__section__img">
@@ -55,16 +63,34 @@
         <div class="header__content">
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>Causes</li>
-                    <li>Events</li>
-                    <li>Blog</li>
-                    <li>Shop</li>
-                    <li>Page</li>
+                    <li class="header--has-child">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="header--has-child">
+                        <a href="#">Causes</a>
+                    </li>
+                    <li class="header--has-child">
+                        <a href="#">Events</a>
+                    </li>
+                    <li class="header--has-child">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li class="header--has-child">
+                        <a href="#">Shop</a>
+                    </li>
+                    <li class="header--has-child">
+                        <a href="#">Page</a>
+                    </li>
                 </ul>
             </nav>
             <div class="header__other">
-                <!-- <img src="assets/images/cart-top.png"> -->
+                <div class="header__other-btn">
+                    <div class="header__other-btn__cart">
+                        <img src="assets/images/cart-top.png">
+                        <div class="header__other-btn__cart-count"></div>
+                    </div>
+                    <img class="header__other-btn__search" src="assets/images/698956-icon-111-search-128.png">
+                </div>
                 <div class="header__donate-btn">
                     <button>Donate Now</button>
                     <img class="header__cart" src="assets/images/donation.png">

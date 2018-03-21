@@ -2,21 +2,43 @@
     background-image: url("../../assets/images/bg-action.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    height: 16.3125rem;
+    height: 26.75rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @mixin atSmall {
+        height: 21.75rem;
+    }
+
+    @mixin atMedium {
+        flex-direction: row;
+    }
+
+    @mixin atLarge {
+        height: 16.3125rem;
+    }
 
     &__text {
         color: #fff;
-        padding-left: 5.5rem;
-        padding-top: 2.5rem;
+        padding: 1.5rem;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @mixin atMedium {
+            padding-left: 4.5rem;
+        }
+        
+        @mixin atLarge {
+            padding-left: 2.5rem;
+        }
     }
 
     &__title {
         font-family: "Montserrat", sans-serif;
         font-size: 2rem;
-        font-weight: 600;
-        
+        font-weight: 400;
     }
 
     &__description {
@@ -26,7 +48,6 @@
     }
 
     &__btn {
-        margin: 5.5rem 3rem 5rem 8.5rem;
         height: 3rem;
         width: 12.7rem;
         font-size: 1.1rem;
@@ -35,6 +56,14 @@
         border: none;
         color: #fff;
         transition: background-color 0.2s linear;
+
+        @mixin atMedium {
+            margin: 5.5rem 3rem 5rem 3.5rem;
+        }
+
+        @mixin atLarge {
+            margin: 5.5rem 3rem 5rem 10.5rem;
+        }
 
         &:hover {
             cursor: pointer;

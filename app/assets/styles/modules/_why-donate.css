@@ -1,32 +1,58 @@
 .why-donate {
     display: flex;
+    flex-direction: column;
     align-items: center;
     max-width: 77.5rem;
     margin: 0 auto;
 
+    @mixin atSmall {
+        flex-direction: row;
+    }
+
     &__section-left {
-        width: 44%;
-        margin: 5rem 2rem 2rem 2rem;
+        width: 100%;
         font-family: "Montserrat", sans-serif;
-        font-size: 1.4rem;
+        font-size: 1rem;
         text-align: center;
+        line-height: 2;
+        padding: 0 1.5rem;
+        padding-top: 2rem;
 
         & h2 {
             font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        @mixin atSmall {
+            width: 44%;
+            margin: 3rem 2rem 2rem 4rem;
+            padding: 1rem;
+        }
+
+        @mixin atMedium {
+            font-size: 1.4rem;
+            margin: 3rem 2rem 2rem 5rem;
         }
     }
 
     &__section-right {
-        width: 56%;
-        border-left: 1px solid $mainOrange;
-        margin: 5rem 2rem 2rem 0;
-        padding: 0 0 0 2rem;
+        width: 100%;
         color: rgba(0, 0, 0, 0.6);
         font-weight: 600;
         font-size: 1rem;
+        text-align: center;
+        padding: 0 1.5rem;
+        padding-bottom: 2rem;
 
         & p {
             line-height: 2;
+        }
+
+        @mixin atSmall {
+            width: 56%;
+            border-left: 1px solid $mainOrange;
+            margin: 3rem 2rem 2rem 0;
+            padding: 0 5rem 0 2rem;
         }
     }
 }

@@ -3,16 +3,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 7rem 0 5rem 0;
+    padding: 2rem 0 3rem 0;
 
     @mixin atSmall {
         flex-direction: row;
+        padding: 3rem 0 2rem 0;
+    }
+
+    @mixin atMedium {
+        padding: 7rem 0 5rem 0;
     }
 
     &__option {
         padding: 1.2rem;
-        width: 92%;
-        margin: 2rem 1rem;
+        width: 95%;
+        margin: 1rem 0;
         font-size: 1.1rem;
         font-weight: 600;
         border: 1px solid rgba(0,0,0,0.1);
@@ -28,6 +33,7 @@
             width: 9.8125rem;
             max-height: 10.625rem;
             min-height: 9.125rem;
+            margin: 2rem 1rem;
         }
 
         @mixin atMedium {
@@ -40,6 +46,8 @@
         }
 
         &__icon {
+            width: 52px;
+            height: 52px;
             transition: all 0.2s linear;
             filter:
                     invert(100%)

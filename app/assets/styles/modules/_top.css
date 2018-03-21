@@ -1,7 +1,8 @@
 .top {
-    height: 4.5rem;
+    height: 3.5rem;
     max-width: 73.125rem;
     margin: 0 auto;
+    position: relative;
 
     @mixin atMedium {
         height: 9.34375rem;
@@ -11,10 +12,16 @@
     }
 
     &__logo {
-        padding-top: 2.5rem;
-        padding-bottom: 3.4375rem;
-        padding-left: 1.5rem;
-        display: inline-block;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+        display: block;
+
+        @mixin atMedium {
+            padding-top: 2.5rem;
+            padding-bottom: 3.4375rem;
+            padding-left: 1.5rem;
+            display: inline-block;
+        }
     }
 
     &__all-sections {
@@ -49,5 +56,68 @@
             color: $lightGray;
         }
         
+    }
+    
+    &__dropdown {
+
+        @mixin atMedium {
+            display: none;
+        }
+
+        &__menu {
+            width: 12px;
+            height: 11px;
+            position: absolute;
+            z-index: 3;
+            top: 25%;
+            left: 6%;
+            cursor: pointer;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 12px;
+                height: 2px;
+                background-color: #000;
+                transform-origin: 0 0;
+                transition: transform .3s ease-out;
+            }
+    
+            &__middle {
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 12px;
+                height: 2px;
+                background-color: #000;
+                transition: all .3s ease-out;
+                transform-origin: 0 50%;
+            }
+    
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 1px;
+                left: 0;
+                width: 12px;
+                height: 2px;
+                background-color: #000;
+                transform-origin: 0 100%;
+                transition: transform .3s ease-out;
+            }
+        }
+
+        &__search {
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 1.5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
