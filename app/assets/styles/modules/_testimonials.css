@@ -14,6 +14,10 @@
         transform: translateY(-30%) translateX(-50%);
         text-align: center;
 
+        &__quote {
+            border-bottom: 0.1px solid #fff;
+        }
+
         & p {
             color: #fff;
             font-weight: 500;
@@ -27,7 +31,7 @@
             color: $mainOrange;
         }
 
-        & img {
+        &__photo {
             display: block;
             margin: 1rem auto;
             border: 1px solid transparent;

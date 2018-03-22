@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Open+Sans:400,400i,600|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="temp/styles/styles.css">
-    <script src="assets/scripts/jquery.min.js"></script>
-    <script src="assets/scripts/parallax.min.js"></script>
+    <script src="assets/scripts/jarallax.min.js"></script>
+    <script src="assets/scripts/countUp.js"></script>
 </head>
 <body>
 
@@ -142,7 +142,7 @@
         </div>
     </section>
 
-    <div class="donate-hero parallax-window" data-parallax="scroll" data-image-src="./assets/images/bg-action.jpg" data-speed="0.9" iosFix="true" androidFix="true">
+    <div class="donate-hero parallax-window jarallax" style="background-image: url('./assets/images/bg-action.jpg');" data-jarallax data-speed="0.6">
         <div class="donate-hero__text">
             <h2 class="donate-hero__title">Make a one-time or monthly donation today</h2>
             <p class="donate-hero__description">Find out how you can help children suffering from physical and psychological abuse through a one-time donation or a pledge of regular support.</p>
@@ -219,39 +219,38 @@
         <button class="recent-causes__load-btn">Load More</button>
     </section>
 
-    <section class="current-count parallax-window" data-parallax="scroll" data-image-src="./assets/images/school-298680_1920.jpg" data-speed="0.7" iosFix="true" androidFix="true" positionY="20px">
-            
-        <img src="assets/images/Rectangle-9.png">
-        <div class="current-count__container">
-            <div class="current-count__section">
-                <img src="assets/images/counter1.png">
-                <div class="current-count__section__text">
-                    <h3>Fundraising</h3>
-                    <span class="current-count__section__count">1000</span>
+    <section class="current-count parallax-window jarallax"  style="background-image: url('./assets/images/school-298680_1920.jpg');" data-jarallax data-speed="0.6" data-img-size="background-size: 200%">
+            <img src="assets/images/Rectangle-9.png" >
+            <div class="current-count__container">
+                <div class="current-count__section">
+                    <img src="assets/images/counter1.png">
+                    <div class="current-count__section__text">
+                        <h3>Fundraising</h3>
+                        <span class="current-count__section__count" id="item-fund"></span>
+                    </div>
+                </div>
+                <div class="current-count__section">
+                    <img src="assets/images/counter2.png">
+                    <div class="current-count__section__text">
+                        <h3>Volunteer</h3>
+                        <span class="current-count__section__count" id="item-volunteer"></span>
+                    </div>
+                </div>
+                <div class="current-count__section">
+                    <img src="assets/images/counter3.png">
+                    <div class="current-count__section__text">
+                        <h3>Donors</h3>
+                        <span class="current-count__section__count" id="item-donor"></span>
+                    </div>
+                </div>
+                <div class="current-count__section">
+                    <img src="assets/images/counter4.png">
+                    <div class="current-count__section__text">
+                        <h3>Raised Funds</h3>
+                        <span class="current-count__section__count" id="item-raised"></span> 
+                    </div>
                 </div>
             </div>
-            <div class="current-count__section">
-                <img src="assets/images/counter2.png">
-                <div class="current-count__section__text">
-                    <h3>Volunteer</h3>
-                    <span class="current-count__section__count">1000</span>
-                </div>
-            </div>
-            <div class="current-count__section">
-                <img src="assets/images/counter3.png">
-                <div class="current-count__section__text">
-                    <h3>Donors</h3>
-                    <span class="current-count__section__count">1000</span>
-                </div>
-            </div>
-            <div class="current-count__section">
-                <img src="assets/images/counter4.png">
-                <div class="current-count__section__text">
-                    <h3>Raised Funds</h3>
-                    <span class="current-count__section__count">1000</span> 
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="events">
@@ -268,12 +267,13 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials jarallax" style="background-image: url('./assets/images/fda-child-care-gallery-4.jpg');" data-jarallax data-speed="0.6" data-img-size="background-size: 150%">
         <img src="assets/images/Rectangle-13-copy1.png">
         <div class="testimonials__text">
+            <img src="assets/images/right-quotation-sign.png" class="testimonials__text__quote">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia, dolor ut sagittis pharetra, magna arcu tincidunt nisl, elementum malesuada.</p>
             <span class="testimonials__text__attr">Michael Black (Senior Leader)</span>
-            <img src="assets/images/test1.jpg">
+            <img src="assets/images/test1.jpg" class="testimonials__text__photo">
         </div>
     </section>
 

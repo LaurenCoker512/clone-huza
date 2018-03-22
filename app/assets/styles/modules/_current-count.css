@@ -1,13 +1,14 @@
 .current-count {
     overflow: hidden;
-    background-image: url("../../assets/images/school-298680_1920.jpg");
+    /* background-image: url("../../assets/images/school-298680_1920.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* background: transparent; */
-    background-size: cover;
-    max-height: 34rem;
+    background-attachment: fixed; */
+    background: transparent;
+    background-size: 300%;
+    height: 30.3rem;
     position: relative;
     margin-bottom: 5rem;
+    z-index: 0;
 
     &__container {
         display: flex;

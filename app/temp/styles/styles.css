@@ -1382,14 +1382,15 @@ body {
 
 .current-count {
     overflow: hidden;
-    background-image: url("../../assets/images/school-298680_1920.jpg");
+    /* background-image: url("../../assets/images/school-298680_1920.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* background: transparent; */
-    background-size: cover;
-    max-height: 34rem;
+    background-attachment: fixed; */
+    background: transparent;
+    background-size: 300%;
+    height: 30.3rem;
     position: relative;
     margin-bottom: 5rem;
+    z-index: 0;
 }
 
 .current-count__container {
@@ -1425,15 +1426,44 @@ body {
         margin-top: 5rem;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+    }
+
+@media (min-width: 775px) {
+
+.events__container {
+            flex-direction: row
+    }
     }
 
 .events__section {
-        width: 50%;
-        max-width: 35.625rem;
         background-color: rgba(0, 0, 0, 0.05);
         padding: 1.5rem 2.5rem;
-        margin: 1rem;
+        margin: 0 1rem;
         transition: all 0.2s linear;
+    }
+
+@media (min-width: 775px) {
+
+.events__section {
+            margin: 1rem;
+            width: 50%;
+            max-width: 21.625rem
+    }
+    }
+
+@media (min-width: 975px) {
+
+.events__section {
+            max-width: 28.5rem
+    }
+    }
+
+@media (min-width: 1180px) {
+
+.events__section {
+            max-width: 35.625rem
+    }
     }
 
 .events__section h3 {
@@ -1476,6 +1506,10 @@ body {
         text-align: center;
     }
 
+.testimonials__text__quote {
+            border-bottom: 0.1px solid #fff;
+        }
+
 .testimonials__text p {
             color: #fff;
             font-weight: 500;
@@ -1489,7 +1523,7 @@ body {
             color: #fd580b;
         }
 
-.testimonials__text img {
+.testimonials__text__photo {
             display: block;
             margin: 1rem auto;
             border: 1px solid transparent;
