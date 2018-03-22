@@ -4,6 +4,16 @@
     &__causes {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+
+        @mixin atSmall {
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        @mixin atMedium {
+            flex-wrap: nowrap;
+        }
     }
 
     &__img {
@@ -12,10 +22,22 @@
     }
 
     &__section {
-        width: 33%;
-        max-width: 23.125rem;
+        max-width: 95%;
         margin: 1rem;
         overflow: hidden;
+
+        @mixin atSmall {
+            max-width: 21.5625rem;
+        }
+
+        @mixin atMedium {
+            width: 33%;
+            max-width: 18.375rem;
+        }
+
+        @mixin atLarge {
+            max-width: 23.125rem;
+        }
 
         &:hover &__text {
             border-left: 2px dashed $mainOrange;

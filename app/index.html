@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Open+Sans:400,400i,600|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="temp/styles/styles.css">
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/parallax.min.js"></script>
 </head>
 <body>
 
@@ -140,13 +142,13 @@
         </div>
     </section>
 
-    <section class="donate-hero" id="slider">
+    <div class="donate-hero parallax-window" data-parallax="scroll" data-image-src="./assets/images/bg-action.jpg" data-speed="0.9" iosFix="true" androidFix="true">
         <div class="donate-hero__text">
             <h2 class="donate-hero__title">Make a one-time or monthly donation today</h2>
             <p class="donate-hero__description">Find out how you can help children suffering from physical and psychological abuse through a one-time donation or a pledge of regular support.</p>
         </div>
         <button class="donate-hero__btn">Learn More</button>
-    </section>
+    </div>
 
     <section class="why-donate">
         <div class="why-donate__section-left">
@@ -161,11 +163,13 @@
         <div class="where-donate__section where-donate__section--left">
             <h2>Help Children in Schools</h2>
             <p>Fund legal teams that fight for justice for children who have been abused in schools and legislation that will put an end to corporal punishment.</p>
+            <span class="where-donate__section__amount">$1200 to go</span>
             <button class="where-donate__btn where-donate__btn--left">Give Now</button>
         </div>
         <div class="where-donate__section where-donate__section--right">
             <h2>Help Children in Homes</h2>
             <p>Fund services for children who are trying to escape or have already fled abusive homes, ensuring that they receive physical and psychological care and are assured a safe, happy new home.</p>
+            <span class="where-donate__section__amount">$1000 to go</span>
             <button class="where-donate__btn where-donate__btn--right">Give Now</button>
         </div>
     </section>
@@ -215,7 +219,8 @@
         <button class="recent-causes__load-btn">Load More</button>
     </section>
 
-    <section class="current-count">
+    <section class="current-count parallax-window" data-parallax="scroll" data-image-src="./assets/images/school-298680_1920.jpg" data-speed="0.7" iosFix="true" androidFix="true" positionY="20px">
+            
         <img src="assets/images/Rectangle-9.png">
         <div class="current-count__container">
             <div class="current-count__section">
@@ -247,7 +252,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <section class="events">
@@ -327,7 +331,7 @@
         <a href="">Pinterest</a>
         <a href="">Google Plus</a>
     </footer>
-
+    
     <script src="temp/scripts/App.js"></script>
 </body>
 </html>

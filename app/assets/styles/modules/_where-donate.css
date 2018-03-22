@@ -1,22 +1,57 @@
 .where-donate {
     display: flex;
+    flex-direction: column;
+
+    @mixin atSmall {
+        flex-direction: row;
+    }
     
     &__section {
-        width: 50%;
+        width: 100%;
         color: #fff;
         padding: 2.5rem;
         text-align: center;
-        min-height: 25rem;
+        min-height: 20.25rem;
+
+        @mixin atSmall {
+            width: 50%;
+            min-height: 25rem;
+        }
 
         & h2 {
             font-family: "Montserrat", sans-serif;
             font-weight: 500;
-            font-size: 2rem;
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 1.7rem;
+
+            @mixin atMedium {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+
+            @mixin atLarge {
+                margin-top: 1rem;
+                font-size: 2rem;
+            }
         }
 
         & p {
             line-height: 2;
             font-size: 1.1rem;
+            max-width: 35rem;
+            margin: 1rem auto;
+        }
+
+        &__amount {
+            display: block;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+
+            @mixin atLarge {
+                margin-bottom: 2rem;
+            }
         }
 
         &--left {
@@ -26,6 +61,8 @@
         &--right {
             background-color: $mainBrown;
         }
+
+        
     }
 
     &__btn {
@@ -33,6 +70,8 @@
         border: none;
         color: #fff;
         font-weight: 600;
+        display: block;
+        margin: 0 auto;
 
         &:hover {
             cursor: pointer;

@@ -1,7 +1,10 @@
 .donate-hero {
-    background-image: url("../../assets/images/bg-action.jpg");
+    /* background-image: url("../../assets/images/bg-action.jpg");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background: transparent;
+    background-size: contain;
     height: 26.75rem;
     display: flex;
     flex-direction: column;

@@ -954,9 +954,12 @@ body {
         }
 
 .donate-hero {
-    background-image: url("../../assets/images/bg-action.jpg");
+    /* background-image: url("../../assets/images/bg-action.jpg");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background: transparent;
+    background-size: contain;
     height: 26.75rem;
     display: flex;
     flex-direction: column;
@@ -1121,26 +1124,80 @@ body {
 
 .where-donate {
     display: flex;
+    flex-direction: column;
 }
 
+@media (min-width: 775px) {
+
+.where-donate {
+        flex-direction: row
+}
+    }
+
 .where-donate__section {
-        width: 50%;
+        width: 100%;
         color: #fff;
         padding: 2.5rem;
         text-align: center;
-        min-height: 25rem;
+        min-height: 20.25rem;
+
+        
+    }
+
+@media (min-width: 775px) {
+
+.where-donate__section {
+            width: 50%;
+            min-height: 25rem
+
+        
+    }
     }
 
 .where-donate__section h2 {
             font-family: "Montserrat", sans-serif;
             font-weight: 500;
-            font-size: 2rem;
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 1.7rem;
         }
+
+@media (min-width: 975px) {
+
+.where-donate__section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1rem
+        }
+    }
+
+@media (min-width: 1180px) {
+
+.where-donate__section h2 {
+                margin-top: 1rem;
+                font-size: 2rem
+        }
+    }
 
 .where-donate__section p {
             line-height: 2;
             font-size: 1.1rem;
+            max-width: 35rem;
+            margin: 1rem auto;
         }
+
+.where-donate__section__amount {
+            display: block;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+@media (min-width: 1180px) {
+
+.where-donate__section__amount {
+                margin-bottom: 2rem
+        }
+    }
 
 .where-donate__section--left {
             background-color: #fd580b;
@@ -1155,6 +1212,8 @@ body {
         border: none;
         color: #fff;
         font-weight: 600;
+        display: block;
+        margin: 0 auto;
     }
 
 .where-donate__btn:hover {
@@ -1177,6 +1236,22 @@ body {
 .recent-causes__causes {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+    }
+
+@media (min-width: 775px) {
+
+.recent-causes__causes {
+            flex-wrap: wrap;
+            flex-direction: row
+    }
+    }
+
+@media (min-width: 975px) {
+
+.recent-causes__causes {
+            flex-wrap: nowrap
+    }
     }
 
 .recent-causes__img {
@@ -1186,10 +1261,31 @@ body {
     }
 
 .recent-causes__section {
-        width: 33%;
-        max-width: 23.125rem;
+        max-width: 95%;
         margin: 1rem;
         overflow: hidden;
+    }
+
+@media (min-width: 775px) {
+
+.recent-causes__section {
+            max-width: 21.5625rem
+    }
+    }
+
+@media (min-width: 975px) {
+
+.recent-causes__section {
+            width: 33%;
+            max-width: 18.375rem
+    }
+    }
+
+@media (min-width: 1180px) {
+
+.recent-causes__section {
+            max-width: 23.125rem
+    }
     }
 
 .recent-causes__section:hover .recent-causes__section__text {
@@ -1265,10 +1361,17 @@ body {
 
 .section-title__title {
         font-family: "Montserrat", sans-serif;
-        font-size: 2.5rem;
+        font-size: 1.9rem;
         font-weight: 600;
         text-align: center;
         margin-bottom: 1.2rem;
+    }
+
+@media (min-width: 1180px) {
+
+.section-title__title {
+            font-size: 2.5rem
+    }
     }
 
 .section-title__subtitle {
@@ -1282,9 +1385,11 @@ body {
     background-image: url("../../assets/images/school-298680_1920.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
-    max-height: 30.32rem;
+    /* background: transparent; */
+    background-size: cover;
+    max-height: 34rem;
     position: relative;
+    margin-bottom: 5rem;
 }
 
 .current-count__container {
