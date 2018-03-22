@@ -10,7 +10,7 @@
     }
 
     @mixin atLarge {
-        background-image: -webkit-linear-gradient(150deg, $mainOrange 42%, $darkGray 42%);
+        background-image: -webkit-linear-gradient(150deg, $mainOrange 43%, $darkGray 43%);
     }
 
     &__content {

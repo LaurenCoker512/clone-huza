@@ -1,14 +1,18 @@
 .top {
     height: 3.5rem;
-    max-width: 73.125rem;
     margin: 0 auto;
     position: relative;
 
     @mixin atMedium {
+        max-width: 60rem;
         height: 9.34375rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+    }
+
+    @mixin atLarge {
+        max-width: 75rem;
     }
 
     &__logo {
@@ -19,8 +23,14 @@
         @mixin atMedium {
             padding-top: 2.5rem;
             padding-bottom: 3.4375rem;
-            padding-left: 1.5rem;
+            padding-left: 0;
+            padding-right: 9rem;
+            margin: 0;
             display: inline-block;
+        }
+
+        @mixin atLarge {
+            padding-right: 7rem;
         }
     }
 
@@ -35,6 +45,10 @@
         padding-top: 2.1rem;
         display: flex;
         flex-direction: row;
+
+        @mixin atLarge {
+            padding: 2.1rem 3rem 1.0625rem 3rem;
+        }
 
         &__text {
             padding-left: 1.625rem;
@@ -54,6 +68,10 @@
 
         &__info {
             color: $lightGray;
+        }
+
+        &:last-child {
+            padding-right: 0;
         }
         
     }

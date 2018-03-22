@@ -351,7 +351,6 @@ body {
 
 .top {
     height: 3.5rem;
-    max-width: 73.125rem;
     margin: 0 auto;
     position: relative;
 }
@@ -359,10 +358,18 @@ body {
 @media (min-width: 975px) {
 
 .top {
+        max-width: 60rem;
         height: 9.34375rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-between
+        justify-content: center
+}
+    }
+
+@media (min-width: 1180px) {
+
+.top {
+        max-width: 75rem
 }
     }
 
@@ -377,8 +384,17 @@ body {
 .top__logo {
             padding-top: 2.5rem;
             padding-bottom: 3.4375rem;
-            padding-left: 1.5rem;
+            padding-left: 0;
+            padding-right: 9rem;
+            margin: 0;
             display: inline-block
+    }
+    }
+
+@media (min-width: 1180px) {
+
+.top__logo {
+            padding-right: 7rem
     }
     }
 
@@ -394,6 +410,14 @@ body {
         display: flex;
         flex-direction: row;
         
+    }
+
+@media (min-width: 1180px) {
+
+.top__section {
+            padding: 2.1rem 3rem 1.0625rem 3rem
+        
+    }
     }
 
 .top__section__text {
@@ -414,6 +438,10 @@ body {
 
 .top__section__info {
             color: #737373;
+        }
+
+.top__section:last-child {
+            padding-right: 0;
         }
 
 @media (min-width: 975px) {
@@ -504,7 +532,7 @@ body {
 @media (min-width: 1180px) {
 
 .header {
-        background-image: -webkit-linear-gradient(150deg, #fd580b 42%, #2b2a27 42%)
+        background-image: -webkit-linear-gradient(150deg, #fd580b 43%, #2b2a27 43%)
 }
     }
 
