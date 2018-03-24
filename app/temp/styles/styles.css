@@ -519,8 +519,9 @@ ul {
             }
 
 .header {
-    overflow: hidden;
-    display: none;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 975px) {
@@ -541,7 +542,6 @@ ul {
     }
 
 .header__content {
-        
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -561,20 +561,107 @@ ul {
     }
     }
 
-.header ul {
-        padding: 0;
-    }
-
-.header ul:first-child {
-            padding-left: 0;
-        }
-
-.header nav {
-        overflow: visible;
+/* & nav {
         padding-top: 0.9rem;
         width: 55%;
         display: flex;
-        flex-wrap: nowrap;
+
+        @mixin atMedium {
+            justify-content: flex-end;
+            padding-right: 2rem;
+        }
+
+        @mixin atLarge {
+            justify-content: center;
+            padding-right: 6rem;
+            width: 65%;
+        }
+    }
+
+    &__main-menu {
+        padding: 0;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+
+    &__main-menu__item {
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #fff;
+        display: inline;
+        padding: 1rem 0.7rem;
+        position: relative;
+
+        & > a {
+            color: #fff;
+            text-decoration: none;
+            transition: color .2s linear;
+        }
+
+        & > a:hover {
+            color: $mainOrange;
+            cursor: pointer;
+        }
+
+        @mixin atLarge {
+            font-size: 1rem;
+            padding: 1rem 1.3125rem;
+        }
+    }
+
+    &__submenu {
+        position: absolute;
+        top: 4.15rem;
+        left: 0.5rem;
+        display: none;
+        width: 10rem;
+        padding: 1.2rem 1.7rem 0.1rem 1.7rem;
+        background-color: #fff;
+        text-transform: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        
+
+        @mixin atLarge {
+            top: 4.25rem;
+        }
+    }
+
+    &__main-menu__item:hover &__submenu {
+        display: block;
+    }
+
+    &__submenu li {
+        color: #737373;
+        font-size: 1rem;
+        padding-bottom: 1.3rem;
+        font-weight: 400;
+        display: block;
+    }
+
+    &__sub-submenu {
+        position: absolute;
+        display: none;
+    }
+
+    & li.header--has-child > a:after {
+        color: #fff;
+        white-space: pre;
+        content: '  ▾';
+        font-size: 0.7rem;
+        transition: color .2s linear;
+    }
+
+    & li.header--has-child:hover > a:after {
+        color: $mainOrange;
+    } */
+
+.header nav {
+        width: 55%;
+        display: flex;
     }
 
 @media (min-width: 975px) {
@@ -594,46 +681,86 @@ ul {
     }
     }
 
-.header__other {
-        width: 45%;
-        display: flex;
-        justify-content: flex-end;
+.header__main-menu {
+        padding: 0;
+        display: block;
     }
 
-@media (min-width: 1180px) {
+.header__main-menu:first-child {
+            padding-left: 0;
+        }
 
-.header__other {
-            width: 35%
-    }
-    }
-
-.header li {
+.header__main-menu__item {
         list-style: none;
         text-transform: uppercase;
         font-size: 0.875rem;
         font-weight: 600;
         color: #fff;
-        display: inline;
+        display: inline-block;
         padding: 1rem 0.7rem;
+        position: relative;
     }
 
-.header li > a {
+.header__main-menu__item > a {
             color: #fff;
             text-decoration: none;
             transition: color .2s linear;
         }
 
-.header li > a:hover {
+.header__main-menu__item > a:hover {
             color: #fd580b;
             cursor: pointer;
         }
 
 @media (min-width: 1180px) {
 
-.header li {
+.header__main-menu__item {
             font-size: 1rem;
             padding: 1rem 1.3125rem
     }
+    }
+
+.header__submenu {
+        position: absolute;
+        top: 95%;
+        left: 0;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        width: 10rem;
+        padding: 1.5rem 1.7rem 0.1rem 1.7rem;
+        background-color: #fff;
+        text-transform: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        float: left;
+    }
+
+/* background-clip: padding-box; */
+
+@media (min-width: 1180px) {
+
+.header__submenu {
+            top: 4.25rem
+    }
+    }
+
+.header__main-menu__item:hover .header__submenu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.header__submenu li {
+        color: #737373;
+        font-size: 1rem;
+        padding-bottom: 1.3rem;
+        font-weight: 400;
+        display: block;
+    }
+
+.header__sub-submenu {
+        position: absolute;
+        display: none;
     }
 
 .header li.header--has-child > a:after {
@@ -646,6 +773,19 @@ ul {
 
 .header li.header--has-child:hover > a:after {
         color: #fd580b;
+    }
+
+.header__other {
+        width: 45%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+@media (min-width: 1180px) {
+
+.header__other {
+            width: 35%
+    }
     }
 
 .header__other-btn {
@@ -690,7 +830,7 @@ ul {
 .header__donate-btn {
         background-color: rgba(0, 0, 0, 0.2);
         border: 1px solid rgba(0, 0, 0, 0.1);
-        padding: 1.4rem 2.2rem 1.7rem 2.2rem;
+        padding: 1.4rem 2.2rem 0 2.2rem;
         font-size: 1.1rem;
         font-weight: 600;
         width: 14.25rem;
