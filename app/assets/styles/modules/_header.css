@@ -158,7 +158,8 @@
         font-weight: 600;
         color: #fff;
         display: inline-block;
-        padding: 1rem 0.7rem;
+        /* padding: 1rem 0.7rem; */
+        padding: 2rem 0.6rem 2rem 0.6rem;
         position: relative;
 
         & > a {
@@ -174,35 +175,46 @@
 
         @mixin atLarge {
             font-size: 1rem;
-            padding: 1rem 1.3125rem;
+            /* padding: 1rem 1.3125rem; */
+            padding: 2rem 1.3125rem 2rem 1.3125rem;
         }
     }
 
     &__submenu {
         position: absolute;
-        top: 95%;
-        left: 0;
-        display: block;
-        visibility: hidden;
-        opacity: 0;
+        /* top: 0;
+        left: 0; */
+        /* display: block; */
+        /* visibility: hidden; */
+        /* opacity: 0; */
+        display: none;
         width: 10rem;
-        padding: 1.5rem 1.7rem 0.1rem 1.7rem;
+        margin-top: 1.9rem;
+        padding: 1.3rem 1.7rem 0.1rem 1.7rem;
         background-color: #fff;
         text-transform: none;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
         z-index: 1000;
         float: left;
         /* background-clip: padding-box; */
 
         @mixin atLarge {
-            top: 4.25rem;
+            /* top: 4.25rem; */
         }
     }
 
-    &__main-menu__item:hover &__submenu {
+    &__main-menu__item:hover > &__submenu {
+        /* visibility: visible;
+        opacity: 1; */
+        z-index: 1000;
+        display: block;
+    }
+
+    /* &__submenu:hover {
         visibility: visible;
         opacity: 1;
-    }
+        z-index: 1000;
+    } */
 
     &__submenu li {
         color: #737373;
@@ -211,6 +223,12 @@
         font-weight: 400;
         display: block;
     }
+
+    /* &__submenu li:hover {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1000;
+    } */
 
     &__sub-submenu {
         position: absolute;
