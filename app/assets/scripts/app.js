@@ -1,4 +1,6 @@
 import CountUp from "countup.js";
+import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints";
+import $ from "jquery";
 
 //Parallax scrolling
 
@@ -13,14 +15,15 @@ jarallax(document.querySelectorAll('.jarallax'), {
 
 //CountUp
 
-var itemFund = document.getElementById("item-fund");
-var countFund = 1000;
-var itemVolunteer = document.getElementById("item-volunteer");
-var countVolunteer = 1000;
-var itemDonor = document.getElementById("item-donor");
-var countDonor = 1000;
-var itemRaised = document.getElementById("item-raised");
-var countRaised = 1000;
+var itemFund = document.getElementById("item-fund"),
+    countFund = 1000,
+    itemVolunteer = document.getElementById("item-volunteer"),
+    countVolunteer = 1000,
+    itemDonor = document.getElementById("item-donor"),
+    countDonor = 200,
+    itemRaised = document.getElementById("item-raised"),
+    countRaised = 1000,
+    counterArea = document.querySelector(".current-count");
 
 var options = {
     useEasing: true,
@@ -38,10 +41,18 @@ function createCounter(item, count) {
     }
 }
 
-createCounter(itemFund, countFund);
-createCounter(itemVolunteer, countVolunteer);
-createCounter(itemDonor, countDonor);
-createCounter(itemRaised, countRaised);
+new Waypoint({
+    element: counterArea,
+    handler: function() {
+        createCounter(itemFund, countFund);
+        createCounter(itemVolunteer, countVolunteer);
+        createCounter(itemDonor, countDonor);
+        createCounter(itemRaised, countRaised);
+    },
+    offset: "70%"
+});
+
+
 
 //Sticky header on scroll
 
@@ -61,3 +72,45 @@ function stickyHeader() {
         }
     }
 }
+
+//Smooth scrolling
+
+var returnBtn = document.querySelector(".return-btn");
+var largeHero = document.querySelector(".large-hero");
+
+new Waypoint({
+    element: largeHero,
+    handler: function(direction) {
+        if (direction == "down") {
+            returnBtn.addClass("return-btn--revealed");
+        } else {
+            returnBtn.removeClass("return-btn--revealed");
+        }
+    }
+});
+
+
+$(function() {
+    // This will select everything with the class smoothScroll
+    // This should prevent problems with carousel, scrollspy, etc...
+    $('.smoothScroll').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 800); // The number here represents the speed of the scroll in milliseconds
+          target.focus(); // Setting focus
+          if (target.is(":focus")){ // Checking if the target was focused
+            return false;
+          } else {
+            target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            target.focus(); // Setting focus
+          };
+          return false;
+        }
+      }
+    });
+  });
+

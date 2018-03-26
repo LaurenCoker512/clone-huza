@@ -1,8 +1,5 @@
 .current-count {
     overflow: hidden;
-    /* background-image: url("../../assets/images/school-298680_1920.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
     background: transparent;
     background-size: 300%;
     height: 30.3rem;
@@ -22,14 +19,19 @@
         width: 25%;
         z-index: 2;
         color: #fff;
-        padding: 2rem;
-        margin: 2rem;
+        margin: 2.5rem;
         font-family: "Montserrat", sans-serif;
+        display: flex;
+
+        &__img {
+            margin-right: 2rem;
+        }
         
         & h3 {
             font-weight: 400;
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
+            margin-top: 0;
         }
 
         &__count {
