@@ -14,6 +14,16 @@
         background-image: -webkit-linear-gradient(150deg, $mainOrange 43%, $darkGray 43%);
     }
 
+    &--sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    &--sticky + .large-hero {
+        padding-top: 5rem;
+    }
+
     &__content {
         margin: 0 auto;
         display: flex;
@@ -210,6 +220,10 @@
         display: block;
     }
 
+    &__main-menu__item:hover > a {
+        color: $mainOrange;
+    }
+
     /* &__submenu:hover {
         visibility: visible;
         opacity: 1;
@@ -222,6 +236,16 @@
         padding-bottom: 1.3rem;
         font-weight: 400;
         display: block;
+
+        & a {
+            color: #737373;
+            text-decoration: none;
+            transition: color 0.2s linear;
+        }
+
+        & a:hover {
+            color: $mainOrange;
+        }
     }
 
     /* &__submenu li:hover {

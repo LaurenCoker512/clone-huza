@@ -1,5 +1,7 @@
 import CountUp from "countup.js";
 
+//Parallax scrolling
+
 jarallax(document.querySelectorAll('.jarallax'), {
     disableParallax: function () {
         return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
@@ -8,6 +10,8 @@ jarallax(document.querySelectorAll('.jarallax'), {
         return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
     }
 });
+
+//CountUp
 
 var itemFund = document.getElementById("item-fund");
 var countFund = 1000;
@@ -38,3 +42,22 @@ createCounter(itemFund, countFund);
 createCounter(itemVolunteer, countVolunteer);
 createCounter(itemDonor, countDonor);
 createCounter(itemRaised, countRaised);
+
+//Sticky header on scroll
+
+window.onscroll = function() {stickyHeader()};
+var header = document.querySelector(".header");
+var sticky = header.offsetTop;
+
+function stickyHeader() {
+    if (window.innerWidth >= 975) {
+        if (window.pageYOffset >= sticky) {
+            header.classList.add("header--sticky");
+        } else if (window.innerWidth <= 975 && header.classList.contains("header--sticky")) {
+            header.classList.remove("header--sticky");
+        }
+        else {
+            header.classList.remove("header--sticky");
+        }
+    }
+}

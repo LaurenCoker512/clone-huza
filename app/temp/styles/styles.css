@@ -543,6 +543,16 @@ ul {
 }
     }
 
+.header--sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+.header--sticky + .large-hero {
+        padding-top: 5rem;
+    }
+
 .header__content {
         margin: 0 auto;
         display: flex;
@@ -758,6 +768,10 @@ ul {
         display: block;
     }
 
+.header__main-menu__item:hover > a {
+        color: #fd580b;
+    }
+
 /* &__submenu:hover {
         visibility: visible;
         opacity: 1;
@@ -771,6 +785,16 @@ ul {
         font-weight: 400;
         display: block;
     }
+
+.header__submenu li a {
+            color: #737373;
+            text-decoration: none;
+            transition: color 0.2s linear;
+        }
+
+.header__submenu li a:hover {
+            color: #fd580b;
+        }
 
 /* &__submenu li:hover {
         visibility: visible;
@@ -1892,10 +1916,18 @@ ul {
 
 .large-footer__section--left p {
                 line-height: 2;
-                margin-top: 3rem;
+                margin-top: 1.5rem;
             }
 
 @media (min-width: 975px) {
+
+.large-footer__section--left p {
+                    max-width: 23rem;
+                    margin-top: 3rem
+            }
+    }
+
+@media (min-width: 1180px) {
 
 .large-footer__section--left p {
                     max-width: 30rem
@@ -1905,7 +1937,7 @@ ul {
 .large-footer__section--right {
             display: flex;
             flex-direction: column;
-            padding-top: 3rem;
+            padding-top: 1rem;
             margin: 0;
         }
 
@@ -1916,25 +1948,34 @@ ul {
         }
     }
 
+@media (min-width: 975px) {
+
+.large-footer__section--right {
+                padding-top: 3rem
+        }
+    }
+
 .large-footer__section--right__column {
                 margin-left: 0;
                 margin-top: 1.5rem;
                 padding: 0;
-                padding-right: 8rem;
+                padding-right: 3rem;
             }
 
 @media (min-width: 775px) {
 
 .large-footer__section--right__column {
                     /* margin-top: auto; */
-                    width: 33%
+                    width: 33%;
+                    margin-top: 0
             }
     }
 
 @media (min-width: 975px) {
 
 .large-footer__section--right__column {
-                    margin-right: auto
+                    margin-right: auto;
+                    margin-top: 1.5rem
             }
     }
 
