@@ -8,10 +8,13 @@
     width: 2.5rem;
     height: 2.5rem;
     transition: all 0.2s linear;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
 
     &--revealed {
-        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 
     &__arrow {

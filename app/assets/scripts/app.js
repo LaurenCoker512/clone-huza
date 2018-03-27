@@ -2,6 +2,15 @@ import CountUp from "countup.js";
 import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints";
 import $ from "jquery";
 
+window.onscroll = function() {
+    stickyHeader();
+    checkBtn();
+};
+
+window.onresize = function() {
+    removeStickyHeader();
+};
+
 //Parallax scrolling
 
 jarallax(document.querySelectorAll('.jarallax'), {
@@ -52,11 +61,8 @@ new Waypoint({
     offset: "70%"
 });
 
-
-
 //Sticky header on scroll
 
-window.onscroll = function() {stickyHeader()};
 var header = document.querySelector(".header");
 var sticky = header.offsetTop;
 
@@ -73,22 +79,43 @@ function stickyHeader() {
     }
 }
 
+function removeStickyHeader() {
+    if (window.innerWidth < 975) {
+        header.classList.remove("header--sticky");
+    }
+}
+
 //Smooth scrolling
 
 var returnBtn = document.querySelector(".return-btn");
 var largeHero = document.querySelector(".large-hero");
+var largeHeroBottom = largeHero.offsetTop;
 
-new Waypoint({
-    element: largeHero,
-    handler: function(direction) {
-        if (direction == "down") {
-            returnBtn.addClass("return-btn--revealed");
-        } else {
-            returnBtn.removeClass("return-btn--revealed");
-        }
+console.log(largeHeroBottom);
+
+function checkBtn() {
+    if (window.pageYOffset >= largeHeroBottom) {
+        returnBtn.classList.add("return-btn--revealed");
+    } else {
+        returnBtn.classList.remove("return-btn--revealed");
     }
-});
+}
 
+// function checkBtn () {
+//     new Waypoint({
+//         element: largeHero,
+//         handler: function(direction) {
+//             if (direction == "down") {
+//                 returnBtn.classList.add("return-btn--revealed");
+//                 console.log("Hello!");
+//             } else {
+//                 returnBtn.classList.remove("return-btn--revealed");
+//                 console.log("Hi!");
+//             }
+//         },
+//         offset: "85%"
+//     });
+// }
 
 $(function() {
     // This will select everything with the class smoothScroll

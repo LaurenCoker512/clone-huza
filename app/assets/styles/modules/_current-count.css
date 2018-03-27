@@ -13,15 +13,28 @@
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
+        flex-wrap: wrap;
+
+        @mixin atMedium {
+            flex-wrap: nowrap;
+        }
     }
 
     &__section {
-        width: 25%;
+        width: 45%;
         z-index: 2;
         color: #fff;
-        margin: 2.5rem;
+        margin: 0 2.2rem;
         font-family: "Montserrat", sans-serif;
         display: flex;
+
+        @mixin atMedium {
+            width: 16%;
+        }
+
+        @mixin atLarge {
+            margin: 0 3rem;
+        }
 
         &__img {
             margin-right: 2rem;
@@ -29,14 +42,58 @@
         
         & h3 {
             font-weight: 400;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
             margin-top: 0;
+
+            @mixin atLarge {
+                font-size: 1.5rem;
+            }
         }
 
         &__count {
             font-weight: 600;
-            font-size: 3.5rem;
+            font-size: 3.3rem;
+
+            @mixin atLarge {
+                font-size: 3.5rem;
+            }
         }
+
+        &--first {
+
+            @mixin atMedium {
+                margin-left: 5rem;
+            }
+
+            @mixin atLarge {
+                margin-left: 2.2rem;
+            }
+            
+        }
+
+        &--large {
+            
+            @mixin atMedium {
+                width: 52%;
+            }
+        }
+
+        /* &--left {
+            margin-left: 0;
+
+            @mixin atMedium {
+                margin-left: auto;
+            }
+
+        }
+
+        &--right {
+            margin-right: 0;
+
+            @mixin atMedium {
+                margin-right: auto;
+            }
+        } */
     }
 }
