@@ -187,7 +187,6 @@
 
         @mixin atLarge {
             font-size: 1rem;
-            /* padding: 1rem 1.3125rem; */
             padding: 2rem 1.3125rem 2rem 1.3125rem;
         }
     }
@@ -202,15 +201,9 @@
         text-transform: none;
         z-index: 1000;
         float: left;
-
-        @mixin atLarge {
-            /* top: 4.25rem; */
-        }
     }
 
     &__main-menu__item:hover > &__submenu {
-        /* visibility: visible;
-        opacity: 1; */
         z-index: 1000;
         display: block;
     }
@@ -218,12 +211,6 @@
     &__main-menu__item:hover > a {
         color: $mainOrange;
     }
-
-    /* &__submenu:hover {
-        visibility: visible;
-        opacity: 1;
-        z-index: 1000;
-    } */
 
     &__submenu li {
         color: #737373;
@@ -242,12 +229,6 @@
             color: $mainOrange;
         }
     }
-
-    /* &__submenu li:hover {
-        visibility: visible;
-        opacity: 1;
-        z-index: 1000;
-    } */
 
     &__sub-submenu {
         position: absolute;
@@ -309,6 +290,65 @@
                     brightness(1000%)
                     saturate(1000%)
         }
+
+        &__search:hover {
+            cursor: pointer;
+        }
+
+        &__search__search-bar {
+            position: absolute;
+            top: 5rem;
+            left: -10.6rem;
+            transition: all 0.5s linear;
+
+            &.header__other-btn__search__search-bar--hidden {
+                animation-name: slideOut;
+                animation-duration: .5s;
+                animation-fill-mode: both;
+                animation-timing-function: cubic-bezier(.4,0,.2,1);
+                visibility: hidden;
+            }
+
+            &.header__other-btn__search__search-bar--revealed {
+                visibility: visible;
+                animation-name: slideIn;
+                animation-duration: .5s;
+                animation-fill-mode: both;
+                animation-timing-function: cubic-bezier(.4,0,.2,1);
+            }
+            
+            & input {
+                color: $lightGray;
+                padding: 0.7rem;
+                width: 16.875rem;
+            }
+
+            & button {
+                display: inline;
+                background-color: $mainOrange;
+                border: none;
+                position: absolute;
+                top: 0;
+                right: -3.2rem;
+                height: 2.8rem;
+                width: 3.2rem;
+                transition: visibility 0.5s linear;
+                transition: background-color 0.2s linear;
+
+                &:hover {
+                    background-color: $darkOrange;
+                    cursor: pointer;
+                }
+
+                & img {
+                    width: 1.5rem;
+                    filter:
+                        invert(100%)
+                        brightness(1000%)
+                        saturate(1000%)
+                }
+            }
+        }
     }
     
     &__donate-btn {
@@ -337,4 +377,24 @@
     }
 }
 
-/* http://apusthemes.com/wp-demo/huza/wp-content/themes/huza/images/donation.png */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 75%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 75%, 0);
+    }
+}

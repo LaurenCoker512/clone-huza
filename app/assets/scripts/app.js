@@ -91,8 +91,6 @@ var returnBtn = document.querySelector(".return-btn");
 var largeHero = document.querySelector(".large-hero");
 var largeHeroBottom = largeHero.offsetTop;
 
-console.log(largeHeroBottom);
-
 function checkBtn() {
     if (window.pageYOffset >= largeHeroBottom) {
         returnBtn.classList.add("return-btn--revealed");
@@ -100,22 +98,6 @@ function checkBtn() {
         returnBtn.classList.remove("return-btn--revealed");
     }
 }
-
-// function checkBtn () {
-//     new Waypoint({
-//         element: largeHero,
-//         handler: function(direction) {
-//             if (direction == "down") {
-//                 returnBtn.classList.add("return-btn--revealed");
-//                 console.log("Hello!");
-//             } else {
-//                 returnBtn.classList.remove("return-btn--revealed");
-//                 console.log("Hi!");
-//             }
-//         },
-//         offset: "85%"
-//     });
-// }
 
 $(function() {
     // This will select everything with the class smoothScroll
@@ -141,3 +123,23 @@ $(function() {
     });
   });
 
+//Search bar
+
+var searchBtn = document.querySelector(".header__other-btn__search");
+var searchBar = document.querySelector(".header__other-btn__search__search-bar");
+
+searchBtn.addEventListener("click", function() {
+    toggleSearchBar();
+});
+
+function toggleSearchBar() {
+    if (searchBar.classList.contains("header__other-btn__search__search-bar--revealed")) {
+        searchBar.classList.remove("header__other-btn__search__search-bar--revealed");
+        searchBar.classList.add("header__other-btn__search__search-bar--hidden");
+        searchBtn.src = "assets/images/698956-icon-111-search-128.png";
+    } else {
+        searchBar.classList.add("header__other-btn__search__search-bar--revealed");
+        searchBar.classList.remove("header__other-btn__search__search-bar--hidden");
+        searchBtn.src = "assets/images/close.png";
+    }
+}
