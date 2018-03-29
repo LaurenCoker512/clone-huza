@@ -1,7 +1,7 @@
 .large-hero {
     position: relative;
     overflow: hidden;
-    /* margin-top: 0.5rem; */
+    margin-top: 0.5rem;
 
     @mixin atMedium {
         margin-top: 0;

@@ -1,0 +1,81 @@
+.mobile-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    &--revealed {
+        width: 68%;
+        min-width: 18.75rem;
+        border-right: 1rem solid rgba(0, 0, 0, 0.05);
+    }
+
+    &__close {
+        position: absolute;
+        background-color: #f65b47;
+        height: 2.5rem;
+        width: 2.5rem;
+        top: 0;
+
+        &__btn {
+            position: absolute;
+            left: 0.2rem;
+            top: -0.2rem;
+            width: 1.5rem;
+            height: 1.5rem;
+
+            &:before, &:after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 0.8rem;
+                width: 4px;
+                background-color: #fff;
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+        
+    }
+
+    & h3 {
+        display: block;
+        height: 2.5rem;
+        background-color: #000;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 0.5rem 1rem 0.5rem 3.5rem;
+        position: relative;
+    }
+
+    & a {
+        padding: 1rem 0;
+        text-decoration: none;
+        font-size: 1rem;
+        color: $darkGray;
+        display: block;
+        transition: all 0.3s linear;
+
+        &:hover {
+            color: $mainOrange;
+        }
+    }
+
+    &__submenu {
+        display: none;
+    }
+}

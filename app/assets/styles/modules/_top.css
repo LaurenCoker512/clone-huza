@@ -35,9 +35,13 @@
     }
 
     &__all-sections {
-        display: flex;
-        flex-direction: row;
-        padding-right: 1.0625rem;
+        display: none;
+
+        @mixin atMedium {
+            display: flex;
+            flex-direction: row;
+            padding-right: 1.0625rem;
+        }
     }
 
     &__section {

@@ -143,3 +143,20 @@ function toggleSearchBar() {
         searchBtn.src = "assets/images/close.png";
     }
 }
+
+//Mobile Menu
+
+var menuBtn = document.querySelector(".top__dropdown__menu");
+var dropdownMenu = document.querySelector(".mobile-menu");
+
+menuBtn.addEventListener("click", function() {
+    openNav();
+});
+
+function openNav() {
+    dropdownMenu.classList.add("mobile-menu--revealed");
+}
+
+function closeNav() {
+    dropdownMenu.classList.remove("mobile-menu--revealed");
+}
