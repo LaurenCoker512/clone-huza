@@ -59,7 +59,11 @@
         font-size: 1rem;
         font-weight: 700;
         margin: 0;
-        padding: 0.5rem 1rem 0.5rem 3.5rem;
+        padding: 0.6rem 1rem 0.5rem 3.5rem;
+        position: relative;
+    }
+
+    & li {
         position: relative;
     }
 
@@ -78,5 +82,60 @@
 
     &__submenu {
         display: none;
+
+        & li {
+            margin-left: -1rem;
+            padding: 0;
+            height: 2.4rem;
+            line-height: 1;
+        }
+
+        &--revealed {
+            display: block;
+        }
+    }
+
+    &__plus {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: #000;
+            transition: all 0.2s linear;
+        }
+
+        &:before {
+            left: 50%;
+            width: 30%;
+            margin-left: -15%;
+            height: 100%;
+        }
+
+        &:after {
+            top: 50%;
+            height: 30%;
+            margin-top: -15%;
+            width: 100%;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &:before, &:after {
+                background-color: $mainOrange;
+            }
+        }
+
+        &--revealed {
+            &:before {
+                display: none;
+            }
+        }
     }
 }

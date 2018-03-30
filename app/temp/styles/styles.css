@@ -2361,7 +2361,11 @@ ul {
         font-size: 1rem;
         font-weight: 700;
         margin: 0;
-        padding: 0.5rem 1rem 0.5rem 3.5rem;
+        padding: 0.6rem 1rem 0.5rem 3.5rem;
+        position: relative;
+    }
+
+.mobile-menu li {
         position: relative;
     }
 
@@ -2382,6 +2386,59 @@ ul {
         display: none;
     }
 
+.mobile-menu__submenu li {
+            margin-left: -1rem;
+            padding: 0;
+            height: 2.4rem;
+            line-height: 1;
+        }
+
+.mobile-menu__submenu--revealed {
+            display: block;
+        }
+
+.mobile-menu__plus {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+.mobile-menu__plus:before, .mobile-menu__plus:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: #000;
+            transition: all 0.2s linear;
+        }
+
+.mobile-menu__plus:before {
+            left: 50%;
+            width: 30%;
+            margin-left: -15%;
+            height: 100%;
+        }
+
+.mobile-menu__plus:after {
+            top: 50%;
+            height: 30%;
+            margin-top: -15%;
+            width: 100%;
+        }
+
+.mobile-menu__plus:hover {
+            cursor: pointer;
+        }
+
+.mobile-menu__plus:hover:before, .mobile-menu__plus:hover:after {
+                background-color: #fd580b;
+            }
+
+.mobile-menu__plus--revealed:before {
+                display: none;
+            }
+
 .overlay {
     position: fixed;
     display: none;
@@ -2398,32 +2455,6 @@ ul {
 .overlay--revealed {
         display: block;
     }
-
-/* #load {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    &__animation {
-        background-color: transparent;
-        margin-top: 10rem;
-        width: 50px;
-        height: 50px;
-        border-radius: 100%;
-        box-shadow: 12px -12px rgba(0, 0, 0, 0.125), 17px 0 rgba(0, 0, 0, 0.25), 12px 12px rgba(0, 0, 0, 0.375), 0 17px rgba(0, 0, 0, 0.5), -12px 12px rgba(0, 0, 0, 0.625), -17px 0 rgba(0, 0, 0, 0.75), -12px -12px rgba(0, 0, 0, 0.875), 0 -17px black;
-        animation: clockwise 0.75s steps(8, end) infinite;
-        z-index: 10;
-    }
-    
-}
-
-@keyframes clockwise {
-    to {transform: rotate(360deg) translatez(0);}
-  } */
 
 #load {
     height: 40px;

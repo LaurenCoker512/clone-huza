@@ -150,6 +150,7 @@ var menuBtn = document.querySelector(".top__dropdown__menu");
 var menuCloseBtn = document.querySelector(".mobile-menu__close");
 var dropdownMenu = document.querySelector(".mobile-menu");
 var overlay = document.querySelector(".overlay");
+var openSubMenus = document.querySelectorAll(".mobile-menu__plus");
 
 menuBtn.addEventListener("click", function() {
     openNav();
@@ -158,6 +159,19 @@ menuBtn.addEventListener("click", function() {
 menuCloseBtn.addEventListener("click", function() {
     closeNav();
 });
+
+openSubMenus.forEach(function(elem) {
+    elem.addEventListener("click", function() {
+        var nextSib = elem.nextElementSibling;
+        if (nextSib.classList.contains("mobile-menu__submenu--revealed")) {
+            elem.classList.remove("mobile-menu__plus--revealed");
+            nextSib.classList.remove("mobile-menu__submenu--revealed");
+        } else {
+            elem.classList.add("mobile-menu__plus--revealed");
+            nextSib.classList.add("mobile-menu__submenu--revealed");
+        }
+    });
+})
 
 function openNav() {
     dropdownMenu.classList.add("mobile-menu--revealed");
