@@ -12,7 +12,8 @@
     &--revealed {
         width: 68%;
         min-width: 18.75rem;
-        border-right: 1rem solid rgba(0, 0, 0, 0.05);
+        overflow: scroll;
+        /* border-right: 1rem solid rgba(0, 0, 0, 0.05); */
     }
 
     &__close {
