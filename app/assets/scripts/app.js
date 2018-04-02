@@ -1,6 +1,7 @@
 import CountUp from "countup.js";
 import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints";
 import $ from "jquery";
+import slick from "slick-carousel";
 
 window.onscroll = function() {
     stickyHeader();
@@ -64,7 +65,8 @@ new Waypoint({
 //Sticky header on scroll
 
 var header = document.querySelector(".header");
-var sticky = header.offsetTop;
+// var sticky = header.offsetTop;
+var sticky = 168;
 
 function stickyHeader() {
     if (window.innerWidth >= 975) {
@@ -183,6 +185,18 @@ function closeNav() {
     overlay.classList.remove("overlay--revealed");
 }
 
+//Carousel
+
+// $(document).ready(function(){
+//     $(".slick-hero").slick({
+        
+//     });
+// });
+
+//Title Text Effects
+
+// $(".large-hero__title").blast({delimiter: "character"});
+
 //Preloader
 
 document.onreadystatechange = function () {
@@ -197,3 +211,5 @@ document.onreadystatechange = function () {
         },1000);
     }
   }
+
+
