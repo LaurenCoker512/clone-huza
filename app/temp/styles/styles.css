@@ -1093,29 +1093,8 @@ ul {
     }
 
 .large-hero__image1 {
-        background-image: url("../../../assets/images/slider1-under-775px.jpg");
+         
      }
-
-@media (min-width: 775px) {
-
-.large-hero__image1 {
-            background-image: url("../../assets/images/slider1-775-1020px.jpg")
-     }
-    }
-
-@media (min-width: 1020px) {
-
-.large-hero__image1 {
-            background-image: url("../../assets/images/slider1-1020-1180px.jpg")
-     }
-    }
-
-@media (min-width: 1180px) {
-
-.large-hero__image1 {
-            background-image: url("assets/images/slider1-775-1020px.jpg")
-     }
-    }
 
 .large-hero__btn {
          position: absolute;

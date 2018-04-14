@@ -3,9 +3,9 @@ import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints
 import $ from "jquery";
 import slick from "slick-carousel";
 
-// window.onload = function() {
-//     heroImgSwitch();
-// };
+window.onload = function() {
+    
+};
 
 window.onscroll = function() {
     stickyHeader();
@@ -14,36 +14,22 @@ window.onscroll = function() {
 
 window.onresize = function() {
     removeStickyHeader();
-    // heroImgSwitch();
 };
 
 //Carousel
 
-function heroImgSwitch() {
-    var width = window.innerWidth;
-    var img = document.querySelector(".large-hero__image");
+// function heroImgSwitch() {
+//     var width = window.innerWidth;
+//     var img = document.querySelector(".large-hero__image1");
 
-    if (width >= 775 && width < 1020) {
-        img.src = "assets/images/slider1-775-1020px.jpg";
-    } else if (width >= 1020 && width < 1180) {
-        img.src = "assets/images/slider1-1020-1180px.jpg";
-    } else if (width >= 1180) {
-        img.src = "assets/images/slider1.jpg";
-    }
-}
-
-$(document).ready(function(){
-    $(".slick-hero").slick({
-        slidesToShow: 1,
-        accessibility: true,
-        autoplay: true,
-        autoplaySpeed: 10000,
-        arrows: true,
-        fade: true,
-        infinite: true,
-        vertical: false
-    });
-});
+//     if (width >= 775 && width < 1020) {
+//         img.src = "assets/images/slider1-775-1020px.jpg";
+//     } else if (width >= 1020 && width < 1180) {
+//         img.src = "assets/images/slider1-1020-1180px.jpg";
+//     } else if (width >= 1180) {
+//         img.src = "assets/images/slider1.jpg";
+//     }
+// }
 
 //Sticky header on scroll
 

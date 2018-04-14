@@ -67,19 +67,7 @@
      }
 
      &__image1 {
-        background-image: url("../../../assets/images/slider1-under-775px.jpg");
-
-        @mixin atSmall {
-            background-image: url("../../assets/images/slider1-775-1020px.jpg");
-        }
-
-        @mixin atML {
-            background-image: url("../../assets/images/slider1-1020-1180px.jpg");
-        }
-
-        @mixin atLarge {
-            background-image: url("assets/images/slider1-775-1020px.jpg");
-        }
+         
      }
 
      &__btn {
