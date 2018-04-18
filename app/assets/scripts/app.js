@@ -31,6 +31,20 @@ window.onresize = function() {
 //     }
 // }
 
+var slider = tns({
+    container: ".large-hero",
+    items: 1,
+    slideBy: ".large-hero__slider",
+    autoplay: true,
+    mode: "gallery",
+    controlsText: ["", ""],
+    nav: false,
+    speed: 2000,
+    autoplayTimeout: 10000,
+    autoplayButton: ".large-hero__autoplay",
+    controlsContainer: ".large-hero__nav"
+});
+
 //Sticky header on scroll
 
 var header = document.querySelector(".header");
