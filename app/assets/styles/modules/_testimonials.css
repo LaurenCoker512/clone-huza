@@ -14,6 +14,10 @@
         transform: translateY(-30%) translateX(-50%);
         text-align: center;
 
+        &:hover .testimonials__nav {
+            opacity: 1;
+        }
+
         &__quote {
             border-bottom: 0.1px solid #fff;
         }
@@ -23,7 +27,9 @@
             font-weight: 500;
             line-height: 2;
             font-size: 1.2rem;
+            margin: 0 auto;
             margin-bottom: 3rem;
+            max-width: 43rem;
         }
 
         &__attr {
@@ -38,4 +44,58 @@
             border-radius: 50%;
         }
     }
+
+    &__nav {
+        opacity: 0;
+        transition: all 0.2s linear;
+
+        &__circle {
+            position: absolute;
+            width: 1.9rem;
+            height: 1.9rem;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            top: 65%;
+            transition: all 0.2s linear;
+
+            &--left {
+                left: 15%;
+            }
+
+            &--right {
+                right: 15%;
+            }
+
+            &:hover {
+                border: 3px solid $mainOrange;
+                cursor: pointer;
+            }
+
+            &:hover .testimonials__nav__arrow {
+                border: solid $mainOrange;
+                border-width: 0 2px 2px 0;
+            }
+        }
+        
+        &__arrow {
+            position: absolute;
+            top: 7px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transition: all 0.2s linear;
+
+            &--left {
+                transform: rotate(135deg);
+                right: 6px;
+            }
+
+            &--right {
+                transform: rotate(-45deg);
+                left: 7px;
+            }
+        }
+    }
+
 }

@@ -16,20 +16,7 @@ window.onresize = function() {
     removeStickyHeader();
 };
 
-//Carousel
-
-// function heroImgSwitch() {
-//     var width = window.innerWidth;
-//     var img = document.querySelector(".large-hero__image1");
-
-//     if (width >= 775 && width < 1020) {
-//         img.src = "assets/images/slider1-775-1020px.jpg";
-//     } else if (width >= 1020 && width < 1180) {
-//         img.src = "assets/images/slider1-1020-1180px.jpg";
-//     } else if (width >= 1180) {
-//         img.src = "assets/images/slider1.jpg";
-//     }
-// }
+//Large Hero Carousel
 
 var slider = tns({
     container: ".large-hero",
@@ -180,6 +167,42 @@ new Waypoint({
     offset: "70%"
 });
 
+//Testimonial Carousel
+
+var sliderTestimonial = tns({
+    container: ".testimonials__slider",
+    items: 1,
+    slideBy: 1,
+    nav: false,
+    speed: 2000,
+    controlsText: ["", ""],
+    controlsContainer: ".testimonials__nav",
+    arrowKeys: true
+});
+
+//News Carousel
+
+var sliderNews = tns({
+    container: ".news__container",
+    items: 1,
+    slideBy: 1,
+    controls: false,
+    nav: true,
+    speed: 1500,
+    navContainer: ".news__nav",
+    responsive: {
+        775: {
+            items: 2,
+            slideBy: 2
+        },
+        1020: {
+            items: 3,
+            slideBy: 3
+        }
+    },
+    arrowKeys: true
+});
+
 //Smooth scrolling
 
 var returnBtn = document.querySelector(".return-btn");
@@ -218,10 +241,6 @@ $(function() {
     });
   });
 
-
-
-
-
 //Preloader
 
 document.onreadystatechange = function () {
@@ -233,7 +252,7 @@ document.onreadystatechange = function () {
            document.getElementById('interactive');
            document.getElementById('load').style.display = "none";
            document.getElementById('contents').style.visibility = "visible";
-        },1000);
+        }, 500);
     }
   }
 

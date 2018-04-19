@@ -2197,6 +2197,7 @@ ul {
     background-position: center;
     max-height: 41.8rem;
     position: relative;
+
 }
 
 .testimonials__text {
@@ -2208,6 +2209,10 @@ ul {
         text-align: center;
     }
 
+.testimonials__text:hover .testimonials__nav {
+            opacity: 1;
+        }
+
 .testimonials__text__quote {
             border-bottom: 0.1px solid #fff;
         }
@@ -2217,7 +2222,9 @@ ul {
             font-weight: 500;
             line-height: 2;
             font-size: 1.2rem;
+            margin: 0 auto;
             margin-bottom: 3rem;
+            max-width: 43rem;
         }
 
 .testimonials__text__attr {
@@ -2231,6 +2238,61 @@ ul {
             border: 1px solid transparent;
             border-radius: 50%;
         }
+
+.testimonials__nav {
+        opacity: 0;
+        transition: all 0.2s linear;
+    }
+
+.testimonials__nav__circle {
+            position: absolute;
+            width: 1.9rem;
+            height: 1.9rem;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            top: 65%;
+            transition: all 0.2s linear;
+        }
+
+.testimonials__nav__circle--left {
+                left: 15%;
+            }
+
+.testimonials__nav__circle--right {
+                right: 15%;
+            }
+
+.testimonials__nav__circle:hover {
+                border: 3px solid #fd580b;
+                cursor: pointer;
+            }
+
+.testimonials__nav__circle:hover .testimonials__nav__arrow {
+                border: solid #fd580b;
+                border-width: 0 2px 2px 0;
+            }
+
+.testimonials__nav__arrow {
+            position: absolute;
+            top: 7px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transition: all 0.2s linear;
+        }
+
+.testimonials__nav__arrow--left {
+                -webkit-transform: rotate(135deg);
+                        transform: rotate(135deg);
+                right: 6px;
+            }
+
+.testimonials__nav__arrow--right {
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                left: 7px;
+            }
 
 .news {
     margin-top: 9rem;
@@ -2296,6 +2358,28 @@ ul {
             font-weight: 600;
             color: #fd580b;
         }
+
+.news__nav {
+        text-align: center;
+    }
+
+.news__nav__btn {
+            display: inline-block;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid transparent;
+            border-radius: 50%;
+            margin: 2rem 0.5rem 0 0.5rem;
+        }
+
+.news__nav__btn:hover {
+                cursor: pointer;
+            }
+
+.news__nav__btn:active {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
 
 .newsletter {
     margin-top: 6rem;
