@@ -2298,6 +2298,32 @@ ul {
     margin-top: 9rem;
 }
 
+.news__viewport {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+@media (min-width: 775px) {
+
+.news__viewport {
+            width: 46.25rem
+    }
+    }
+
+@media (min-width: 975px) {
+
+.news__viewport {
+            width: 60rem
+    }
+    }
+
+@media (min-width: 1180px) {
+
+.news__viewport {
+            width: 75rem
+    }
+    }
+
 .news__container {
         margin-top: 3rem;
         display: flex;
@@ -2306,11 +2332,24 @@ ul {
 
 .news__section {
         overflow: hidden;
-        width: 33%;
-        max-width: 18.375rem;
+        width: 100%;
         margin: 1rem;
         box-shadow: -1px 10px 15px 3px rgba(0, 0, 0, 0.15);
         transition: all 0.2s linear;
+    }
+
+@media (min-width: 480px) {
+
+.news__section {
+            width: 50%
+    }
+    }
+
+@media (min-width: 975px) {
+
+.news__section {
+            width: 33%
+    }
     }
 
 @media (min-width: 1180px) {
@@ -2336,13 +2375,21 @@ ul {
             }
 
 .news__section__text {
-            margin-top: 2.5rem;
-            padding: 1.5rem 1.5rem 3rem 1.5rem;
+            margin-top: 0;
+            padding: 1rem;
         }
+
+@media (min-width: 775px) {
+
+.news__section__text {
+                margin-top: 2.5rem; 
+                padding: 1.5rem 1.5rem 3rem 1.5rem
+        }
+    }
 
 .news__section__text h3 {
                 font-family: "Montserrat", sans-serif;
-                font-size: 1.2rem;
+                font-size: 0.9rem;
                 font-weight: 500;
                 transition: color 0.2s linear;
             }
@@ -2352,6 +2399,13 @@ ul {
                     color: #fd580b;
                 }
 
+@media (min-width: 775px) {
+
+.news__section__text h3 {
+                    font-size: 1.2rem
+            }
+    }
+
 .news__section__text button {
                 border: none;
                 background-color: transparent;
@@ -2359,9 +2413,15 @@ ul {
                 font-size: 1.1rem;
                 color: rgba(0, 0, 0, 0.5);
                 transition: color 0.2s linear;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
             }
+
+@media (min-width: 775px) {
+
+.news__section__text button {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem
+            }
+    }
 
 .news__section__text button:hover {
                     color: #fd580b;
@@ -2392,10 +2452,17 @@ ul {
             }
 
 .news__section__date {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: #fd580b;
         }
+
+@media (min-width: 775px) {
+
+.news__section__date {
+                font-size: 1rem
+        }
+    }
 
 .news__section__date__clock {
                 margin-right: 0.5rem;

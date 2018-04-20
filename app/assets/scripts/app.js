@@ -191,11 +191,11 @@ var sliderNews = tns({
     speed: 1500,
     navContainer: ".news__nav",
     responsive: {
-        775: {
+        480: {
             items: 2,
             slideBy: 2
         },
-        1020: {
+        975: {
             items: 3,
             slideBy: 3
         }
