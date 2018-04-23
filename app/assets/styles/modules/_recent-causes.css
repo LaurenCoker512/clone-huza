@@ -74,8 +74,8 @@
         & h2 {
             font-family: "Montserrat", sans-serif;
             font-weight: 500;
-            font-size: 2rem;
-            margin-top: 0.8rem;
+            font-size: 1.7rem;
+            margin-top: 0rem;
         }
 
         &__donated {
@@ -83,7 +83,7 @@
             font-weight: 600;
         }
 
-        & p {
+        &__description {
             color: rgba(0, 0, 0, 0.6);
             font-weight: 600;
             font-family: "Roboto", sans-serif;

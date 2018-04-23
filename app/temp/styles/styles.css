@@ -1863,8 +1863,8 @@ ul {
 .recent-causes__section h2 {
             font-family: "Montserrat", sans-serif;
             font-weight: 500;
-            font-size: 2rem;
-            margin-top: 0.8rem;
+            font-size: 1.7rem;
+            margin-top: 0rem;
         }
 
 .recent-causes__section__donated {
@@ -1872,7 +1872,7 @@ ul {
             font-weight: 600;
         }
 
-.recent-causes__section p {
+.recent-causes__section__description {
             color: rgba(0, 0, 0, 0.6);
             font-weight: 600;
             font-family: "Roboto", sans-serif;

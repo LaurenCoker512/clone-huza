@@ -2,6 +2,7 @@ import CountUp from "countup.js";
 import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints";
 import $ from "jquery";
 import slick from "slick-carousel";
+import Chart from "chart.js";
 
 window.onload = function() {
     
@@ -166,6 +167,65 @@ new Waypoint({
     },
     offset: "70%"
 });
+
+//Causes Doughnut Charts
+
+var cause1 = new Chart(document.getElementById("cause1"), {
+    type: "doughnut",
+    data: {
+        datasets: [
+            {
+                backgroundColor: ["#fd580b", "#d5d5d5"],
+                data: [26, 74]
+            }
+        ]
+    },
+    options: {
+        title: {
+            display: false
+        },
+        cutoutPercentage: 70,
+        rotation: 2 * Math.PI
+    }
+});
+
+var cause2 = new Chart(document.getElementById("cause2"), {
+    type: "doughnut",
+    data: {
+        datasets: [
+            {
+                backgroundColor: ["#fd580b", "#d5d5d5"],
+                data: [100, 0]
+            }
+        ]
+    },
+    options: {
+        title: {
+            display: false
+        },
+        cutoutPercentage: 70,
+        rotation: 2 * Math.PI
+    }
+});
+
+var cause3 = new Chart(document.getElementById("cause3"), {
+    type: "doughnut",
+    data: {
+        datasets: [
+            {
+                backgroundColor: ["#fd580b", "#d5d5d5"],
+                data: [9, 91]
+            }
+        ]
+    },
+    options: {
+        title: {
+            display: false
+        },
+        cutoutPercentage: 70,
+        rotation: 2 * Math.PI
+    }
+})
 
 //Testimonial Carousel
 
