@@ -165,7 +165,7 @@ new Waypoint({
         createCounter(itemDonor, countDonor);
         createCounter(itemRaised, countRaised);
     },
-    offset: "70%"
+    offset: "20%"
 });
 
 //Causes Doughnut Charts
